@@ -13,7 +13,6 @@ competencies: Programming, Javascript
 
 ## Learning Objectives
 - Explain the DOM: its value and its structure
-- Introduce the role, utility, and pros/cons of JQuery
 - Access DOM Elements using relative selection
 - Access DOM Elements using query selectors
 - Create, Read (access), Update (content and attributes), and Destroy DOM elements
@@ -57,66 +56,28 @@ It is important to note though, that there are separate element and text nodes:
 
 We will generally interact with elements and consider the text something belonging to the element but remember to keep in mind actual implementation
 
-## JQuery (10 minutes)
-
-Historically the DOM's implementation was inconsistent across browsers (while not entirely vanished, this is much less of a problem between modern browsers) and many of it's methods are lengthy.
-
-By addressing both of these issues and smoothing other rough edges of JS in the browser, a library called JQuery became phenomenally popular.
-
-Today we will introduce JQuery methods alongside their "vanilla" JS counterparts and let you compare.
-
-Keep in mind that JQuery methods cannot be used on regular DOM elements and vanilla properties and methods are not available on JQuery elements, though the conversion is easy. Explore this early
-
-> Have you heard of JQuery? What are your preconceptions?
-
-> What could the advantages of bringing in a library be? What could the disadvantages be?
-
-### Loading Libraries
-
-> What is a JS library?
-
-How we load our code is an enormously interesting problem that is actually one of the biggest focuses of modern web development.
-For the time being, we will be using sourced script tags which will make a request of the necessary JS file and load it into the browser environment.
-We do this using a script tag. [Crockford on Script Tags](http://javascript.crockford.com/script.html) 
-
-Just the same way that we link a local file with `<script src="./script.js"></script>`, we can load a remotely hosted file by providing a url to `src`: `<script src="https://code.jquery.com/jquery-3.2.1.js"></script>`
-
-A browser loads a page by reading HTML and rendering it to the screen. 
-When a script tag is encountered, reading and rendering of the HTML is put on hold until the script is loaded, parsed, and evaluated.
-On a slow connection or when the file takes a long time to run this can cause a significant delay to rendering. Weak UX, sad!
-For this reason, we link script tags at the end of the file so that at least the user has something nice to look at as the scripts load.
-
-> Why does loading scripts at the end make me a little uneasy? (John's personal opinion -- would love to be contradicted)
-
 ## Accessing Element Objects (60 minutes)
 When interacting with the DOM, we will primarily be interfacing with element object
 
 The `document` object is exposed on the global object, `window`. This is the top level or root element object
 
-If you haven't already, clone this repo. Open `docs/index.html` in your browser and open the developer console. JQuery has been imported from the HTML. 
+If you haven't already, clone this repo. Open `docs/index.html` in your browser and open the developer console.
 
 The document has several entry points to the page's content including `.head` and `.body`
 
 ### Relative Selection (20 minutes)
 There are several properties that every element has which reference the elements proximate to it:
 
-- `.children` (jquery: `.children()`)
+- `.children`
 - `.childNodes`
 - `.firstChild`
 - `.lastChild`
-- `.previousSibling` (jquery: `.prev()`)
-- `.nextSibling` (jquery: `.next()`)
-- `.parentElement` (jquery: `.parent()`)
-
-jquery only:
-- `.siblings()`
-- `.parents()`
+- `.previousSibling`
+- `.nextSibling`
+- `.parentElement`
 
 ![Node Relations]( https://www.w3schools.com/xml/navigate.gif ) 
 
-In order to use jquery methods, we need to construct a jquery object. This is done by passing an element to the jquery constructor function.
-To get the jquery document element we evaluate `$(document)`. 
-To get the underlying DOM element we use the get method and provide an index (jquery objects all act as collections). So (`$(document).get(0) === document`)
 
 #### You Do (5 minutes)
 
@@ -143,14 +104,14 @@ Fortunately, we have some much easier method of accessing elements.
 
 #### By Selector <-- USE THIS ONE
 `document.querySelector(selector)` and `document.querySelectorAll(selector)` use CSS selectors to target elements.
-This is the primary means by which jquery selects elements: `$(selector)`.  
 
 > What's the difference between `querySelector` and `querySelectorAll`? How does `$(selector)` behave?
 
 > Why would we use any of the other selectors?
 
 #### You Do (5 minutes)
-Play with that same list, now using query selectors. Spend some time perusing the jquery docs and the MDN documentation on these functions.
+Play with that same list, now using query selectors.
+
 As always, discuss what you find with your neighbors -- explaining these ideas in your own words is as valuable as using them
 
 ### BREAK (10 minutes)
@@ -163,30 +124,25 @@ https://github.com/ga-wdi-exercises/js-dom-quotes
 
 ### Attributes
 
-vanilla: `element.getAttribute(attr)` / `element.setAttribute(attr, val)`
-jquery: `$el.attr(attr)` / `$el.attr(attr, val)` 
+`element.getAttribute(attr)` / `element.setAttribute(attr, val)`
 
 > Do you notice anything about how jquery gets and sets methods?
 
 ### Classes
 
-vanilla: `element.classList` (see docs)
-jquery: `$el.hasClass(class)`, `$el.addClass(class)`, `$el.removeClass(class)`, `$el.toggleClass(class)`
+`element.classList`
 
 ### Style
 
-vanilla: `element.style`
-jquery: `$el.css(propertyName, [value])`
+`element.style`
 
 ### Input Value
 
-vanilla: `inputElement.value` / `inputElement.value = someValue` 
-jquery: `$inputEl.val()` / `$inputEl.val(someValue)`
+`inputElement.value` / `inputElement.value = someValue` 
 
 ### Content
 
-vanilla: `element.innerHTML` / `element.innerHTML = "<p> I'm new </p>"`
-jquery: `$el.html()` / `$el.html( "<p> I'm new </p>")`
+`element.innerHTML` / `element.innerHTML = "<p> I'm new </p>"`
 
 ### You do: Logo hijack (15 min)
 
@@ -205,23 +161,20 @@ Bonus: Add a new element between the image and the search textbox, telling the w
 ### Creating Elements
 
 vanilla: `document.createElement(tagName)`
-jquery: `$('<tagName></tagName>')`
 
 NOTE: this just creates elements but they are not yet on the document!
 
 ### Adding Elements
 
-vanilla: `element.appendChild(newElement)`
-jquery: `$el.append($el)`
+`element.appendChild(newElement)`
 
-> look at the docs for the vanilla methoth `.innerHTML` and the jquery method `.html()`. How are these different from the above method?
+> look at the docs for the js method `.innerHTML`. How is it different from the above method?
 
-> Why might we not really like any of these?
+> Why might we not really like this?
 
 ### Removing Elements
 
-vanilla: `element.removeChild(childElement)`
-jquery: `$el.remove(selector)` / `$el.empty()`
+`element.removeChild(childElement)`
 
 ## Intro to Events / Review (time permitting)
 
@@ -229,16 +182,7 @@ We've covered a lot today but we are missing one key element to creating dynamic
 
 > What are we missing?
 
-The following exercise introduces this and will be a great primer for tomorrow.
-
-For the time being, use jquery for the following exercise. The relevant docs are here [click events](http://api.jquery.com/on/#event-handler)!
-
-https://github.com/ga-wdi-exercises/ttmar
-
-(As always, Eloquent JS has a great treatment of events: http://eloquentjavascript.net/14_event.html)
-
 ## Reference
 - [W3 Schools DOM](https://www.w3schools.com/js/js_htmldom.asp)
 - [MDN DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction#Interfaces_and_Objects)
-- [JQuery Docs](http://api.jquery.com/)
 - [Eloquent JS: The Document Object Model](http://eloquentjavascript.net/13_dom.html)
