@@ -1,17 +1,6 @@
----
-title: Document Object Model
-type: lesson
-duration: 1
-authors:
-    creators: Jesse Shawl (DC)
-    editors: John Master (DC), Matt Scilipoti (DC)
-competencies: Programming, Javascript
----
-
-
 # The Document Object Model (DOM)
 
-## Learning Objectives
+## Learning Objectives (_students will be able to..._)
 - Explain the DOM: its value and its structure
 - Access DOM Elements using relative selection
 - Access DOM Elements using query selectors
@@ -35,6 +24,8 @@ JavaScript is the lingua franca of the web. Since it's advent in 1995 as a neat 
 Foundational to the success (existence) of this revolution is a clunky and confusing API called the DOM, the Document Object Model.
 The DOM's conception was organic and as its importance grew was standardized.
 
+> NOTE: Keep in mind that the DOM is NOT just whatever is in the HTML!
+
 The DOM is best understood through use so we will waste little time before diving in but if you are interested in a more complete / formalized description, check out [CSS Tricks: What is the DOM?](https://css-tricks.com/dom/) and [MDN Intro to the DOM]( https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction )
 
 ### Representing the Document
@@ -46,20 +37,29 @@ The document is the content of our webpage which is encoded into our HTML. The H
 
 An HTML document (like so many other things in programming) is a tree. We will think of it as a tree of elements:
 
-![Element Tree](http://www.tuxradar.com/files/LXF118.tut_grease.diagram.png)
+![Element Tree](assets/LXF118.tut_grease.diagram.png)
 
 It is important to note though, that there are separate element and text nodes:
 
-![HTML as a tree](http://www.cs.toronto.edu/~shiva/cscb07/img/dom/treeStructure.png)
+![HTML as a tree](assets/treeStructure.png)
 
-![HTML more tree like](http://www.cs.toronto.edu/~shiva/cscb07/img/dom/treeStructureAlternate.png)
+![HTML more tree like](assets/treeStructureAlternate.png)
 
 We will generally interact with elements and consider the text something belonging to the element but remember to keep in mind actual implementation
+
+## Query Selectors (10 minutes)
+
+Historically the DOM's implementation has been inconsistent across browsers and many of its methods are/were lengthy. This led to the creation of a library called JQuery, which became phenomenally popular due to its ability to patch some annoying parts of JavaScript, and created many methods to assist the interaction with the DOM in the browser. JQuery helped remove lots of boilerplate browser detection schemes, where certain code was only valid in certain browsers. 
+
+> read this: https://blog.garstasio.com/you-dont-need-jquery/why-not/
+
+We're not going to dive into jQuery today. Instead, we'll be looking at more modern ways of interacting with the DOM using the free methods provided to us by the DOM.  
+
 
 ## Accessing Element Objects (60 minutes)
 When interacting with the DOM, we will primarily be interfacing with element object
 
-The `document` object is exposed on the global object, `window`. This is the top level or root element object
+The `document` object is exposed on the global object, `window`. This is the top level or root element object.
 
 If you haven't already, clone this repo. Open `docs/index.html` in your browser and open the developer console.
 
@@ -77,6 +77,7 @@ There are several properties that every element has which reference the elements
 - `.parentElement`
 
 ![Node Relations]( https://www.w3schools.com/xml/navigate.gif ) 
+
 
 
 #### You Do (5 minutes)
@@ -118,7 +119,7 @@ As always, discuss what you find with your neighbors -- explaining these ideas i
 
 ### You Do: Selecting DOM elements (20 minutes)
 
-https://github.com/ga-wdi-exercises/js-dom-quotes
+https://github.com/wdi-nyc/js-dom-quotes
 
 ## Manipulating Element Objects (60 minutes)
 
@@ -129,6 +130,7 @@ https://github.com/ga-wdi-exercises/js-dom-quotes
 > Do you notice anything about how jquery gets and sets methods?
 
 ### Classes
+
 
 `element.classList`
 
@@ -144,6 +146,7 @@ https://github.com/ga-wdi-exercises/js-dom-quotes
 
 `element.innerHTML` / `element.innerHTML = "<p> I'm new </p>"`
 
+
 ### You do: Logo hijack (15 min)
 
 1. Open up https://www.microsoft.com/en-us/ in Chrome or Firefox, and open up the console.
@@ -156,7 +159,6 @@ https://github.com/ga-wdi-exercises/js-dom-quotes
 
 Bonus: Add a new element between the image and the search textbox, telling the world that "Microsoft is the new Apple".
 
-### BREAK (10 minutes)
 
 ### Creating Elements
 
@@ -183,6 +185,5 @@ We've covered a lot today but we are missing one key element to creating dynamic
 > What are we missing?
 
 ## Reference
-- [W3 Schools DOM](https://www.w3schools.com/js/js_htmldom.asp)
 - [MDN DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction#Interfaces_and_Objects)
 - [Eloquent JS: The Document Object Model](http://eloquentjavascript.net/13_dom.html)
