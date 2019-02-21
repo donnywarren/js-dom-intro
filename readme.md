@@ -53,7 +53,7 @@ Historically the DOM's implementation has been inconsistent across browsers and 
 
 > read this: https://blog.garstasio.com/you-dont-need-jquery/why-not/
 
-We're not going to dive into jQuery today. Instead, we'll be looking at more modern ways of interacting with the DOM using the free methods provided to us by the DOM.  
+We're not going to dive into jQuery. Instead, we'll be looking at more modern ways of interacting with the DOM using the free methods provided to us by the DOM.  
 
 
 ## Accessing Element Objects (60 minutes)
@@ -126,8 +126,6 @@ https://git.generalassemb.ly/wdi-nyc-terabyte/js-dom-quotes-lab
 ### Attributes
 
 `element.getAttribute(attr)` / `element.setAttribute(attr, val)`
-
-> Do you notice anything about how jquery gets and sets methods?
 
 ### Classes
 
