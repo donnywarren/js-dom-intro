@@ -160,7 +160,7 @@ Bonus: Add a new element between the image and the search textbox, telling the w
 
 ### Creating Elements
 
-vanilla: `document.createElement(tagName)`
+`document.createElement(tagName)`
 
 NOTE: this just creates elements but they are not yet on the document!
 
