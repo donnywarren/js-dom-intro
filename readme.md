@@ -147,7 +147,7 @@ https://git.generalassemb.ly/wdi-nyc-terabyte/js-dom-quotes-lab
 
 ### You do: Logo hijack (15 min)
 
-1. Open up https://www.microsoft.com/en-us/ in Chrome or Firefox, and open up the console.
+1. Open up https://www.microsoft.com/en-us/ in Chrome, and open up the console.
 1. find an image url for the apple logo
 1. Store the url to the apple logo in a variable.
 1. Find the Microsfot logo using JS and store it in a variable.
