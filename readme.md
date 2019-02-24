@@ -12,7 +12,7 @@
 
 > What does "it runs in the browser" mean? Why is this something that we would want to do?
 
-> We've talked about values (primitive types and objects) and the language constructs for creating our own. We have also alluded to / used some values which are available to us in the "environment". What is an example?
+> We've talked about values (primitive types and objects) and the language constructs for creating our own.
 
 > What is the most annoying thing about websites?
 
