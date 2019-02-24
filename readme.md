@@ -106,7 +106,7 @@ Fortunately, we have some much easier method of accessing elements.
 #### By Selector <-- USE THIS ONE
 `document.querySelector(selector)` and `document.querySelectorAll(selector)` use CSS selectors to target elements.
 
-> What's the difference between `querySelector` and `querySelectorAll`? How does `$(selector)` behave?
+> What's the difference between `querySelector` and `querySelectorAll`?
 
 > Why would we use any of the other selectors?
 
