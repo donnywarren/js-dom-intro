@@ -16,7 +16,7 @@
 
 > What is the most annoying thing about websites?
 
-> What is HTML / a Document (in terms of the web) and how to we represent it?
+> What is HTML / a Document (in terms of the web) and how do we represent it?
 
 ## Introducing the DOM (10 minutes)
 
