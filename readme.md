@@ -176,12 +176,6 @@ NOTE: this just creates elements but they are not yet on the document!
 
 `element.removeChild(childElement)`
 
-## Intro to Events / Review (time permitting)
-
-We've covered a lot today but we are missing one key element to creating dynamic sites.
-
-> What are we missing?
-
 ## Reference
 - [MDN DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction#Interfaces_and_Objects)
 - [Eloquent JS: The Document Object Model](http://eloquentjavascript.net/13_dom.html)
