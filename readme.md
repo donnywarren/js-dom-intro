@@ -115,8 +115,6 @@ Play with that same list, now using query selectors.
 
 As always, discuss what you find with your neighbors -- explaining these ideas in your own words is as valuable as using them
 
-### BREAK (10 minutes)
-
 ### You Do: Selecting DOM elements (20 minutes)
 
 https://git.generalassemb.ly/sei-nyc-cicadas/js-dom-quotes-lab
