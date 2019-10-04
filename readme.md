@@ -37,13 +37,13 @@ The document is the content of our webpage which is encoded into our HTML. The H
 
 An HTML document (like so many other things in programming) is a tree. We will think of it as a tree of elements:
 
-![Element Tree](assets/LXF118.tut_grease.diagram.png)
+![Element Tree](LXF118.tut_grease.diagram.png)
 
 It is important to note though, that there are separate element and text nodes:
 
-![HTML as a tree](assets/treeStructure.png)
+![HTML as a tree](treeStructure.png)
 
-![HTML more tree like](assets/treeStructureAlternate.png)
+![HTML more tree like](treeStructureAlternate.png)
 
 We will generally interact with elements and consider the text something belonging to the element but remember to keep in mind actual implementation
 
@@ -143,20 +143,6 @@ https://git.generalassemb.ly/sei-nyc-cicadas/js-dom-quotes-lab
 ### Content
 
 `element.innerHTML` / `element.innerHTML = "<p> I'm new </p>"`
-
-
-### You do: Logo hijack (15 min)
-
-1. Open up https://www.microsoft.com/en-us/ in Chrome, and open up the console.
-1. find an image url for the apple logo
-1. Store the url to the apple logo in a variable.
-1. Find the Microsfot logo using JS and store it in a variable.
-1. Modify the source of the logo IMG so that it's an apple logo instead.
-1. Find the Microsoft search input and store it in a variable.
-1. Modify the placeholder of the input so that it says "Search Apple" instead.
-
-Bonus: Add a new element between the image and the search textbox, telling the world that "Microsoft is the new Apple".
-
 
 ### Creating Elements
 
