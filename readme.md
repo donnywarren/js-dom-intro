@@ -16,8 +16,6 @@
 
 > We've talked about values (primitive types and objects) and the language constructs for creating our own.
 
-> What is the most annoying thing about websites?
-
 > What is HTML / a Document (in terms of the web) and how do we represent it?
 
 ## Introducing the DOM (10 minutes)
